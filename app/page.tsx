@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import banner1 from "@/public/banner1.png";
 import banner2 from "@/public/banner2.png";
@@ -10,9 +9,7 @@ import ekdosis1 from "@/public/ekdosis1.png";
 import ekdosis2 from "@/public/ekdosis2.png";
 
 import galleryImage1 from "@/public/galleryImage1.png";
-import {
-  StaticImageData
-} from "next/dist/shared/lib/get-img-props";
+import { StaticImageData } from "next/dist/shared/lib/get-img-props";
 import { ImageScroller } from "@/app/components/ImageScroller";
 import { Carousel } from "@/app/components/Carousel";
 
@@ -51,8 +48,6 @@ const staticPhotos: StaticImageData[] = [
   banner1,
 ];
 
-
-
 export default function Home() {
   return (
     <main className="flex min-h-screen w-full flex-col items-center bg-white text-black">
@@ -68,7 +63,7 @@ export default function Home() {
         <Image src={banner1} alt="banner1"></Image>
       </section>
       <section className="w-full flex justify-center bg-[#F9F9F9]">
-        <div className="max-w-[1040px] w-full flex flex-col items-center gap-6  py-12 px-4">
+        <div className="max-w-[1040px] w-full flex flex-col items-center gap-6 py-12 px-4">
           <h1>Ερευνητικά Κέντρα</h1>
 
           <p className="text-center pb-8">
@@ -93,12 +88,12 @@ export default function Home() {
         </p>
         <Image src={banner1} alt="banner1"></Image>
       </section>
-      <section className="flex flex-col max-w-[1040px]  py-12 px-4 gap-6">
+      <section className="flex flex-col max-w-[1040px] w-full  py-12 px-4 gap-6">
         <h1>Δείτε επίσης</h1>
         <div className="flex w-full gap-4">
           {deData.map((de, index) => (
             <div
-              className="flex flex-col justify-center items-center relative overflow-hidden w-1/3 h-[400px] px-4 py-16 gap-8"
+              className="flex flex-col justify-center items-center relative overflow-hidden w-1/3 xl:h-[400px] p-6 gap-8"
               key={index}
             >
               <Image
@@ -106,9 +101,11 @@ export default function Home() {
                 alt={de.title}
                 className="absolute top-0 left-0 z-10 object-cover filter brightness-50"
               />
-              <h2 className="z-20 text-xl font-semibold text-white">{de.title}</h2>
-              <button className="py-4 px-6 z-20 ring-2 ring-white rounded-full text-white max-w-min hover:bg-blue-accent hover:ring-blue-accent transition-colors">
-                {index % 2 == 0 ? "Πλοηγηθείτε": "Εξερευνήστε"}
+              <h2 className="z-20 text-xl font-semibold text-white text-center">
+                {de.title}
+              </h2>
+              <button className="xl:py-4 xl:px-6 py-1 px-2 text-sm xl:text-base z-20 ring-2 ring-white rounded-full text-white max-w-min hover:bg-blue-accent hover:ring-blue-accent transition-colors">
+                {index % 2 == 0 ? "Πλοηγηθείτε" : "Εξερευνήστε"}
               </button>
             </div>
           ))}

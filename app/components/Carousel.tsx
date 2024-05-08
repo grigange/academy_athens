@@ -9,7 +9,7 @@ export const Carousel = ({ data }: { data: CarouselItemType[] }) => {
       <button className=" -mr-2 rotate-180 bg-blue-dark rounded-full flex items-center justify-center h-8 w-8">
         <Image src={chevron_right} alt="Περιήγηση αριστερά στο καρουζέλ" />
       </button>
-      <div className="gap-4 flex overflow-x-scroll max-w-[1020px] w-full min-w-[221px]">
+      <div className="gap-4 flex overflow-x-scroll no-scrollbar max-w-[1020px] w-full min-w-[221px]">
         {data.map((item, i) => (
           <CarouselItem
             title={item.title}
