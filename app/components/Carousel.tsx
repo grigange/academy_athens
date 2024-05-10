@@ -7,13 +7,12 @@ import { useRef, useState } from "react";
 
 export const Carousel = ({ data }: { data: CarouselItemType[] }) => {
     const containerRef = useRef<HTMLDivElement>(null);
-    const [active, setActive] = useState(0);
     const scrollTo = (multiplier: number) => {
-      const width = containerRef.current?.clientWidth / data.length;
-      setActive((curr)=>curr + width*multiplier);
+      const width = (containerRef.current) ? containerRef.current.scrollWidth / data.length : 0;
+      const left = containerRef.current?.scrollLeft ?? 0;
       containerRef.current?.scrollTo({
         top: 0,
-        left: active + width * multiplier,
+        left: left + width * multiplier,
         behavior: "smooth",
       });
     };
