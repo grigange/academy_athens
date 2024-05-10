@@ -1,19 +1,24 @@
 import Image from "next/image";
 import banner1 from "@/public/banner1.png";
 import banner2 from "@/public/banner2.png";
-import { CarouselItemType } from "@/app/types";
 import de1 from "@/public/de1.png";
 import de2 from "@/public/de2.png";
 import de3 from "@/public/de3.png";
 import ekdosis1 from "@/public/ekdosis1.png";
 import ekdosis2 from "@/public/ekdosis2.png";
-
 import galleryImage1 from "@/public/galleryImage1.png";
+
+import { CarouselItemType } from "@/app/types";
 import { StaticImageData } from "next/dist/shared/lib/get-img-props";
 import { ImageScroller } from "@/app/components/ImageScroller";
 import { Carousel } from "@/app/components/Carousel";
 
+
 const carouselData1: CarouselItemType[] = [
+  { title: "Κέντρον Ερεύνης της Αρχαιότητος" },
+  { title: "Κέντρο Ερεύνης Φυσικής της Ατμόσφαιρας και Κλιματολογίας	" },
+  { title: "Κέντρον Ερεύνης της Ελληνικής Λαογραφίας" },
+  { title: "Κέντρον Ερεύνης Νεοελληνικών Διαλέκτων και Ιδιωμάτων Ι.Λ.Ν.Ε" },
   { title: "Κέντρον Ερεύνης της Αρχαιότητος" },
   { title: "Κέντρο Ερεύνης Φυσικής της Ατμόσφαιρας και Κλιματολογίας	" },
   { title: "Κέντρον Ερεύνης της Ελληνικής Λαογραφίας" },

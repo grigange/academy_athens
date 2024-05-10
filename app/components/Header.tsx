@@ -21,14 +21,14 @@ const Menu = ({ json }: { json: MenuResponse }) => {
             <Link href={item1.url} className="w-full h-full flex items-center">
               {item1.name}
             </Link>
-            {item1.submenu && item1.submenu?.length > 0 && (
+            {item1.submenu && item1.submenu.length > 0 && (
               <Image
                 src={chevron_down}
                 alt="Search"
                 className="group-hover/1:rotate-180 group-focus-within/1:rotate-180 transition-transform"
               />
             )}
-            {item1.submenu && item1.submenu?.length > 0 && (
+            {item1.submenu && item1.submenu.length > 0 && (
               <div className="absolute group-hover/1:flex group-focus-within/1:flex hidden flex-col gap-2 justify-start w-max top-[80px] left-0 bg-blue-dark/95">
                 {item1.submenu?.map((item2) => (
                   <div
@@ -45,7 +45,7 @@ const Menu = ({ json }: { json: MenuResponse }) => {
                         className="group-hover/2:rotate-180 group-focus-within/2:rotate-180 transition-transform"
                       />
                     )}
-                    {item2.submenu && item2.submenu?.length > 0 && (
+                    {item2.submenu && item2.submenu.length > 0 && (
                       <div className="absolute group-hover/2:flex group-focus-within/2:flex hidden flex-col gap-2 justify-start w-max max-w-64 top-0 left-[100%] bg-blue-dark/90">
                         {item2.submenu?.map((item3) => (
                           <Link
